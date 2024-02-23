@@ -13,32 +13,32 @@
         <div class="box">
             <h2 class="nome_produto">Nome Produto</h2>
             <div class="circulo"></div>
-            <img class = "imagem" src="../Projetos privados/nike/tenisnike.png" alt="nike-tenis">
+            <img class = "imagem" src="./nike/tenisnike.png" alt="nike-tenis">
             <a class = "botao" href="#">Comprar</a>
         </div>
         <div class="box">
             <h2 class="nome_produto">Nome Produto</h2>
             <div class="circulo"></div>
-            <img class = "imagem" src="../Projetos privados/nike/tenisnike.png" alt="nike-tenis">
+            <img class = "imagem" src="./nike/tenisnike.png" alt="nike-tenis">
             <a class = "botao" href="#">Comprar</a>
         </div>
         <div class="box">
             <h2 class="nome_produto">Nome Produto</h2>
             <div class="circulo"></div>
-            <img class = "imagem" src="../Projetos privados/nike/tenisnike.png" alt="nike-tenis">
+            <img class = "imagem" src="./nike/tenisnike.png" alt="nike-tenis">
             <a class = "botao" href="#">Comprar</a>
         </div>
     </div>
 
-    <script src="vanilla-tilt.min.js"></script>
-    <script>
-        VanillaTilt.init(document.querySelectorAll(".box"), {
-		max: 25,
-		speed: 400
-	});
-    </script>
-
-
-    
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".box"), {
+            max: 25,
+            speed: 400
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".box"));
+    </script>  
 </body>
 </html>
