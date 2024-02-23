@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313;    
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1280px;
+}
+.container .box
+{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 45px;
+    background-color: #252525;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+.container .box::after
+{
+    content: "NIKE";
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 900;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s; 
+    width: 100%;
+    left: 0;
+
+    
+}
+.container .box::before
+{
+    content: "SHOES";
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    font-size: 80px;
+    font-weight: 900;
+    font-style: italic;
+    opacity: 0; 
+    transition: 0.5s;   
+}
+.container .box:hover::before, .container .box:hover::after
+{
+    opacity: 0.05;
+}
+.container .box .nome_produto
+{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translate3d(0,0,75px);   
+    transform-style: preserve-3d; 
+}
+.container .box:hover .nome_produto
+{
+    opacity: 1;
+    top:30px
+}
+.container .box .circulo 
+{
+    background-color: #9bdc28;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,30px);
+    opacity: 1;
+    transition: 0.5s;
+    z-index: 1;
+}
+.container .box .botao
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-decoration: none;
+    background-color: #9bdc28;
+    border-radius: 40px;
+    padding: 8px 25px;
+    color: #083d04;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,75px);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;       
+}
+.container .box:hover .botao
+{
+    opacity: 1;
+    bottom: 20px;
+    
+
+}
+.container .box .imagem
+{
+    position: absolute;
+    max-width: 260px;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,100px); 
+    transform-style: preserve-3d;
+    z-index: 10;
+    transition: 0.8s
+
+}
+.container .box:hover .imagem
+{
+    transform: translate3d(-50%,-50%,100px) rotate(15deg);
+}
+
